@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+Company{companyName='Welcome', abbreviation='A0', updateDate=01.09.2020, address=' ', foundationDate=28.07.1989, numberOfEmployees=823, auditor='Esmeralda Maksimovna', phoneNumber='+375294916730', email='A0_welcome@gmail.com', industry='Comunication', typeOfBusiness='provider', link='www.welcome/A0/call_free.com'},
+=======
+Company name: VadimsBricks
+Abbreviation: VB
+Industry: Construction
+Date of foundation: 18.12.1999
+Number of employees: 53,
+Company name: WhiskerWhiskey
+Abbreviation: WW
+Industry: Alcohol
+Date of foundation: 04.04.1906
+Number of employees: 450,
+Company name: Welcome
+Abbreviation: A0
+Industry: Comunication
+Date of foundation: 28.07.1989
+Number of employees: 823,
+>>>>>>> origin/develop

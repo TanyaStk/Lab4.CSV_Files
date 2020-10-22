@@ -1,0 +1,51 @@
+Date and time of running: 15.10.2020 20:11:27Inserted dates: 05.05.1995 - 01.01.2000Amount of matching notes: 1Date and time of running: 15.10.2020 20:13:29
+Inserted dates: 01.01.1800 - 15.10.2020
+Amount of matching notes: 3
+Date and time of running: 15.10.2020 20:15:11
+Inserted dates: 01.01.1800 - 15.10.2020
+Amount of matching notes: 3
+Date and time of running: 15.10.2020 20:16:12
+Inserted dates: 01.01.1800 - 15.10.2020
+Amount of matching notes: 3
+<<<<<<< HEAD
+Date and time of running: 22.10.2020 19:49:49
+5
+Amount of matching notes: 1
+Date and time of running: 22.10.2020 19:51:01
+1
+Amount of matching notes: 0
+Date and time of running: 22.10.2020 19:51:05
+a0
+Amount of matching notes: 0
+Date and time of running: 22.10.2020 19:51:09
+2
+Amount of matching notes: 0
+Date and time of running: 22.10.2020 19:51:25
+Construction
+Amount of matching notes: 0
+Date and time of running: 22.10.2020 20:06:17
+
+Amount of matching notes: 0
+Date and time of running: 22.10.2020 20:06:32
+
+Amount of matching notes: 0
+Date and time of running: 22.10.2020 20:07:01
+
+Amount of matching notes: 3
+Date and time of running: 22.10.2020 20:15:47
+
+Amount of matching notes: 3
+Date and time of running: 22.10.2020 20:19:37
+
+Amount of matching notes: 0
+Date and time of running: 22.10.2020 20:19:42
+
+Amount of matching notes: 0
+Date and time of running: 22.10.2020 20:35:56
+Request: a0
+Amount of matching notes: 1
+Date and time of running: 22.10.2020 20:36:48
+Request: a0
+Amount of matching notes: 1
+=======
+>>>>>>> origin/develop
