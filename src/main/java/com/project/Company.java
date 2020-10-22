@@ -2,11 +2,12 @@ package com.project;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
-
-import static java.lang.String.format;
+import java.util.Objects;
 
 public class Company {
+    private final SimpleDateFormat
+            format = new SimpleDateFormat("dd.MM.yyyy");
+
     private String companyName;
     private String abbreviation;
     private Date updateDate;
@@ -20,39 +21,68 @@ public class Company {
     private String typeOfBusiness;
     private String link;
 
-    public Company(String inf) {
+    public Company(String inf) throws Exception {
         String[] words = inf.split(";");
-        try {
-            companyName = words[0];
-            abbreviation = words[1];
-            updateDate = new SimpleDateFormat("dd.MM.yyyy").parse(words[2]);
-            address = words[3];
-            foundationDate = new SimpleDateFormat("dd.MM.yyyy").parse(words[4]);
-            numberOfEmployees = Integer.parseInt(words[5]);
-            auditor = words[6];
-            phoneNumber = words[7];
-            email = words[8];
-            industry = words[9];
-            typeOfBusiness = words[10];
-            link = words[11];
-        } catch (Exception ex) {
-            System.out.println("Exception detected: " + ex.getLocalizedMessage());
+        if (words.length < 12) {
+            throw new Exception();
         }
+        companyName = words[0];
+        abbreviation = words[1];
+        updateDate = format.parse(words[2]);
+        address = words[3];
+        foundationDate = format.parse(words[4]);
+        numberOfEmployees = Integer.parseInt(words[5]);
+        auditor = words[6];
+        phoneNumber = words[7];
+        email = words[8];
+        industry = words[9];
+        typeOfBusiness = words[10];
+        link = words[11];
+
     }
 
-    public String companyInformation() {
-        String inf = "";
-        try {
-            SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
-            inf = ("Company name: " + companyName + "\n" +
-                    "Abbreviation: " + abbreviation + "\n" +
-                    "Industry: " + industry + "\n" +
-                    "Date of foundation: " + format.format(foundationDate) + "\n" +
-                    "Number of employees: " + numberOfEmployees);
-        } catch (Exception ex) {
-            System.out.println("Exception detected: " + ex.getLocalizedMessage());
-        }
-        return inf;
+    @Override
+    public String toString() {
+        return "Company{" +
+                "companyName='" + companyName + '\'' +
+                ", abbreviation='" + abbreviation + '\'' +
+                ", updateDate=" + format.format(updateDate) +
+                ", address='" + address + '\'' +
+                ", foundationDate=" + format.format(foundationDate) +
+                ", numberOfEmployees=" + numberOfEmployees +
+                ", auditor='" + auditor + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", industry='" + industry + '\'' +
+                ", typeOfBusiness='" + typeOfBusiness + '\'' +
+                ", link='" + link + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Company company = (Company) o;
+        return numberOfEmployees == company.numberOfEmployees &&
+                Objects.equals(companyName, company.companyName) &&
+                Objects.equals(abbreviation, company.abbreviation) &&
+                Objects.equals(updateDate, company.updateDate) &&
+                Objects.equals(address, company.address) &&
+                Objects.equals(foundationDate, company.foundationDate) &&
+                Objects.equals(auditor, company.auditor) &&
+                Objects.equals(phoneNumber, company.phoneNumber) &&
+                Objects.equals(email, company.email) &&
+                Objects.equals(industry, company.industry) &&
+                Objects.equals(typeOfBusiness, company.typeOfBusiness) &&
+                Objects.equals(link, company.link);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(companyName, abbreviation, updateDate,
+                address, foundationDate, numberOfEmployees,
+                auditor, phoneNumber, email, industry, typeOfBusiness, link);
     }
 
     public void setCompanyName(String companyName) {
